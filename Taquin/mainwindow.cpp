@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     ui->setupUi(this);
-    this->setWindowIcon(QIcon("/home/barry/Bureau/test/Taquin/Images/240px-15-puzzle.png"));
+    this->setWindowIcon(QIcon("/home/barry/Bureau/test/Taquin/Taquin/Images/240px-15-puzzle.png"));
     ui->menuaide->setTitle("");
     ui->menuaide->setIcon(style()->standardIcon(QStyle::SP_DialogHelpButton));
     ui->action_A_Propos_de_Taquin->setIcon(style()->standardIcon(QStyle::SP_FileDialogInfoView));
@@ -308,10 +308,10 @@ void MainWindow::aprops()
 {
     QMessageBox infos;
     infos.setIcon(QMessageBox::Icon::NoIcon);
-    infos.setIconPixmap(QPixmap("/home/barry/Bureau/test/Taquin/Images/240px-15-puzzle.png").scaled(50,50));
+    infos.setIconPixmap(QPixmap("/home/barry/Bureau/test/Taquin/Taquin/Images/240px-15-puzzle.png").scaled(50,50));
     infos.setText(tr("Cette application a été créée par BARRY SAIKOU YAYA pour le projet Qt de L3 Informatique."));
     infos.setWindowTitle(tr("A propos de Taquin "));
-    infos.setWindowIcon(QIcon("/home/barry/Bureau/test/Taquin/Images/240px-15-puzzle.png"));
+    infos.setWindowIcon(QIcon("/home/barry/Bureau/test/Taquin/Taquin/Images/240px-15-puzzle.png"));
     infos.setStandardButtons(QMessageBox::Ok);
     infos.exec();
 }
@@ -411,20 +411,20 @@ void MainWindow::nouvellepartie()
 
 void MainWindow::charge_image_arbre()
 {
-    charger_image("/home/barry/Bureau/test/Taquin/Images/arbre-papillons.jpg");
-    _dernierimg="/home/barry/Bureau/test/Taquin/Images/arbre-papillons.jpg";
+    charger_image("/home/barry/Bureau/test/Taquin/Taquin/Images/arbre-papillons.jpg");
+    _dernierimg="/home/barry/Bureau/test/Taquin/Taquin/Images/arbre-papillons.jpg";
 }
 
 void MainWindow::charge_image_reseau()
 {
-    charger_image("/home/barry/Bureau/test/Taquin/Images/reseau-informatique.jpeg");
-    _dernierimg="/home/barry/Bureau/test/Taquin/Images/reseau-informatique.jpeg";
+    charger_image("/home/barry/Bureau/test/Taquin/Taquin/Images/reseau-informatique.jpeg");
+    _dernierimg="/home/barry/Bureau/test/Taquin/Taquin/Images/reseau-informatique.jpeg";
 }
 
 void MainWindow::charge_image_foret()
 {
-    charger_image("/home/barry/Bureau/test/Taquin/Images/saikou.jpg");
-    _dernierimg="/home/barry/Bureau/test/Taquin/Images/saikou.jpg";
+    charger_image("/home/barry/Bureau/test/Taquin/Taquin/Images/saikou.jpg");
+    _dernierimg="/home/barry/Bureau/test/Taquin/Taquin/Images/saikou.jpg";
 }
 
 void MainWindow::charge_image_org()
@@ -481,7 +481,7 @@ void MainWindow::sauver_partie()
      dialog.setOption(QFileDialog::DontUseNativeDialog);
      dialog.setLabelText(QFileDialog::Accept,tr("Sauvegarder"));
      dialog.setLabelText(QFileDialog::Reject,tr("Annuler"));
-      QString  filePath = dialog.getSaveFileName(this, tr("Sauvegarder la partie"), "/home/barry/Bureau/test/Taquin/Sauvegarder", "*.save");
+      QString  filePath = dialog.getSaveFileName(this, tr("Sauvegarder la partie"), "/home/barry/Bureau/test/Taquin/Taquin/Sauvegarder", "*.save");
     if (!filePath.isNull()) {
         filePath=filePath.endsWith(".save",Qt::CaseInsensitive)?filePath:filePath.append(".save");
         QFile file(filePath);
@@ -526,7 +526,7 @@ void MainWindow::charger_partie()
         QFileDialog dialog(this);
         dialog.setLabelText(QFileDialog::Accept,tr("Sauvegarder"));
         dialog.setLabelText(QFileDialog::Reject,tr("Annuler"));
-         QString filePath = dialog.getOpenFileName(this, tr("Charger partie"), "/home/barry/Bureau/test/Taquin/Sauvegarder", "*.save");
+         QString filePath = dialog.getOpenFileName(this, tr("Charger partie"), "/home/barry/Bureau/test/Taquin/Taquin/Sauvegarder", "*.save");
         if (!filePath.isNull()) {
             QFile file(filePath);
 
@@ -610,7 +610,7 @@ void MainWindow::aproposqt()
             "<p>Qt is The Qt Company Ltd product developed as an open source project. See <a href='https://www.qt.io'>qt.io</a> for more information.</p>").arg(qVersion()).arg(annee);
 
         QMessageBox *dialog=new QMessageBox(QMessageBox::NoIcon,tr("A propos de Qt"),"",QMessageBox::NoButton,this);
-        dialog->setIconPixmap(QPixmap("/home/barry/Bureau/test/Taquin/Images/qtinfos.png").scaled(60,60));
+        dialog->setIconPixmap(QPixmap("/home/barry/Bureau/test/Taquin/Taquin/Images/qtinfos.png").scaled(60,60));
         dialog->setText(aboutQtText);
         dialog->setTextFormat(Qt::AutoText);
         dialog->adjustSize();
