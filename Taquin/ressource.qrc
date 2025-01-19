@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>annexe/reseau-informatique.jpeg</file>
+        <file>annexe/foret.jpg</file>
+        <file>annexe/arbre-papillons.jpg</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>annexe/240px-15-puzzle1.png</file>
+        <file>annexe/240px-15-puzzle.png</file>
+        <file>annexe/qtinfos.png</file>
+    </qresource>
+</RCC>

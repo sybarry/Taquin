@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>333</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Taquin </string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../build-projet_diga-Desktop-Debug/puzzle.png</normaloff>../build-projet_diga-Desktop-Debug/puzzle.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="French" country="France"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>60</width>
+    <height>60</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>530</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFicher">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="_nouvpartie"/>
+    <addaction name="_chargpart"/>
+    <addaction name="_sauvpart"/>
+    <addaction name="separator"/>
+    <addaction name="_quitpart"/>
+   </widget>
+   <widget class="QMenu" name="menuFond">
+    <property name="title">
+     <string>Fond</string>
+    </property>
+    <addaction name="_imgor"/>
+    <addaction name="_imgfo"/>
+    <addaction name="_imgarb"/>
+    <addaction name="_imgre"/>
+   </widget>
+   <widget class="QMenu" name="menuaide">
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <addaction name="action_A_propos_de_QT"/>
+    <addaction name="action_A_Propos_de_Taquin"/>
+   </widget>
+   <addaction name="menuFicher"/>
+   <addaction name="menuFond"/>
+   <addaction name="menuaide"/>
+  </widget>
+  <action name="_nouvpartie">
+   <property name="text">
+    <string>Nouvelle partie</string>
+   </property>
+  </action>
+  <action name="_chargpart">
+   <property name="text">
+    <string>Charger</string>
+   </property>
+  </action>
+  <action name="_quitpart">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="_sauvpart">
+   <property name="text">
+    <string>Sauvegarder</string>
+   </property>
+  </action>
+  <action name="_imgor">
+   <property name="text">
+    <string>Orginal</string>
+   </property>
+  </action>
+  <action name="_imgfo">
+   <property name="text">
+    <string>Foret</string>
+   </property>
+  </action>
+  <action name="_imgarb">
+   <property name="text">
+    <string>Arbre</string>
+   </property>
+  </action>
+  <action name="_imgre">
+   <property name="text">
+    <string>Réseau</string>
+   </property>
+  </action>
+  <action name="action_A_propos_de_QT">
+   <property name="text">
+    <string>A propos de Qt</string>
+   </property>
+   <property name="toolTip">
+    <string>A propos de Qt</string>
+   </property>
+  </action>
+  <action name="action_A_Propos_de_Taquin">
+   <property name="text">
+    <string>A propos de Taquin</string>
+   </property>
+   <property name="toolTip">
+    <string>A propos de Taquin</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
